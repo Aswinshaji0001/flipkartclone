@@ -1,11 +1,59 @@
-.cardx{
-    width: 400px;
-    height: 500px;
-    background-color: aqua;
-    margin: 5%;
-}
-.c1{
+#c1{
     width: 100%;
     height: 75vh;
-    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+
 }
+
+
+.cardy{
+    width: 40%;
+    height: 70vh;
+    background-color: rgb(255, 255, 255);
+ 
+}
+.cardy img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-position: center;
+        background-size: cover;
+}
+.cardx{
+    width: 60%;
+    height: 70vh;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+.price{
+    color:red;
+}
+.avail{
+    color:red;
+}
+.r{
+    margin-top: 5px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+.butt{
+    display: flex;
+    justify-content: space-evenly;
+   
+}
+#bt11{
+    padding: 2%;
+    color: white;
+    background-color: black;
+}
+#bt22{
+    padding: 2%;
+    color: white;
+    background-color: black;
+}
+
