@@ -11,8 +11,8 @@ async function fetchData(){
         str=``
             str+=`
            <div class="cardx">
-            <h1>${products.products.title}</h1>
-            <h3>${products.products[0].description}</h3>
+            <h1>${products.products.id.title}</h1>
+            <h3>${products.products.id.description}</h3>
             <h3>${products.products[0].category}</h3>
             <div class="price"><h1>$${products.products[0].price}</h1></div>
             <p><b>Brand: </b>${products.products[0].brand}</p>
