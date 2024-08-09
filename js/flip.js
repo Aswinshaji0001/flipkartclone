@@ -8,7 +8,7 @@
                     <img src="${product.thumbnail}" alt="">
                     <h5>${product.title.substring(0,15)}</h5>
                     <p>${product.price}</p>
-                    <button class="bt2"><a href="product.html">Click Here</a></button>
+                    <button class="bt2"><a href="product.html?id=${product.id}">Click Here</a></button>
 
             </div>`
         })
@@ -30,7 +30,7 @@
                     <img src="${product.thumbnail}" alt="">
                     <h5>${product.title.substring(0,15)}</h5>
                     <p>${product.price}</p>
-                    <button class="bt2"><a href="product.html">Click Here</a></button>
+                    <button class="bt2"><a href="product.html?id=${product.id}">Click Here</a></button>
 
             </div>`
         })

@@ -1,16 +1,17 @@
 async function fetchData(){
     try{
-        const res=await fetch("https://dummyjson.com/products");
+        console.log(window.location);
+        const urlParams=new URLSearchParams(window.location.search)
+        id=urlParams.get('id');
+        const res=await fetch(`https://dummyjson.com/products/${id}`)
+        console.log(id);
         const products= await res.json();
+        console.log(products.images);
+        document.getElementById("img").src=products.thumbnail
         str=``
-            str+=`<div class="cardy">
-           <img src="${products.products[0].thumbnail}" alt="">
-           <div class="butt">
-                <button id="bt11">Add To Cart</button> <button id="bt22">Buy Now</button>
-            </div>
-        </div>
+            str+=`
            <div class="cardx">
-            <h1>${products.products[0].title}</h1>
+            <h1>${products.products.title}</h1>
             <h3>${products.products[0].description}</h3>
             <h3>${products.products[0].category}</h3>
             <div class="price"><h1>$${products.products[0].price}</h1></div>
@@ -28,11 +29,7 @@ async function fetchData(){
                     <p><b>Comment:</b>${products.products[0].reviews[0].comment}</p>
                 </div>
             </div>
-
-
-          
         </div>`
-        
         document.getElementById("c1").innerHTML=str;
     }
     catch(error)
