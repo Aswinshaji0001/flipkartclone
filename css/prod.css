@@ -56,4 +56,6 @@
     color: white;
     background-color: black;
 }
-
+.rev{
+    display: flex;
+}
