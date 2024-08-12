@@ -19,9 +19,6 @@ function getCart(){
     document.getElementById("carts").innerHTML=str;
    
 }
-function changeImage(img){
-    document.getElementById("img").src=img;
-}
 function removeCart(id){
     localStorage.removeItem(id);
     getCart();

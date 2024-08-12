@@ -11,6 +11,11 @@ async function fetchData(){
         
         console.log(products.images);
         document.getElementById("img").src=`${products.thumbnail}`
+        str1=``;
+        products.images.map((i)=>{
+        str1+=`<img onmouseover="changeImage('${i}')" src="${i}" alt="" >`;
+        })
+        document.getElementById("m2").innerHTML=str1;
         document.getElementById("one").innerHTML=`${products.title}`
         document.getElementById("three").innerHTML=`${products.description}`
         document.getElementById("four").innerHTML=`${products.category}`
@@ -42,4 +47,8 @@ async function fetchData(){
     localStorage.setItem(products.id,JSON.stringify(products));
     window.location.href='./cart.html';
  }
+ function changeImage(img){
+    document.getElementById("img").src=img;
+}
+
 
