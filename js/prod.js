@@ -1,3 +1,4 @@
+let products;
 async function fetchData(){
     try{
         console.log(window.location);
@@ -5,7 +6,7 @@ async function fetchData(){
         id=urlParams.get('id');
         const res=await fetch(`https://dummyjson.com/products/${id}`)
         console.log(id);
-        const products= await res.json();
+         products= await res.json();
         console.log(products);
         
         console.log(products.images);
@@ -39,3 +40,9 @@ async function fetchData(){
     }
 }
  fetchData();
+ function addToCart(){
+    console.log(products);
+    localStorage.setItem(products.id,JSON.stringify(products));
+    window.location.href='./cart.html';
+ }
+
