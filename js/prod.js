@@ -14,25 +14,22 @@ async function fetchData(){
         document.getElementById("one").innerHTML=`${products.title}`
         document.getElementById("three").innerHTML=`${products.description}`
         document.getElementById("four").innerHTML=`${products.category}`
-        document.getElementById("five").innerHTML=`${products.price}`
-        document.getElementById("six").innerHTML=`${products.brand}`
-        document.getElementById("seven").innerHTML=`${products.sku}`
-        document.getElementById("eight").innerHTML=`${products.warrantyInformation}`
-        document.getElementById("nine").innerHTML=`${products.shippingInformation}`
-        document.getElementById("ten").innerHTML=`<span class="r">Rating: ${products.rating}</span><br><br>Stock: ${products.stock}<br><br> Availibility: <span class="avail">${products.availabilityStatus}</span>`
+        document.getElementById("five").innerHTML=`<span class="m"><b>$<b>${products.price}</span>`
+        document.getElementById("six").innerHTML=`<span class="m"><b>Brand:<b> ${products.brand}</span>`
+        document.getElementById("seven").innerHTML=`<span class="m"><b>Model No:<b> ${products.sku}</span>`
+        document.getElementById("eight").innerHTML=`<span class="m"><b>Warranty Info : <b>${products.warrantyInformation}</span>`
+        document.getElementById("nine").innerHTML=`<span class="m"><b>Shipping Info : <b>${products.shippingInformation}</span><br>`
+        document.getElementById("ten").innerHTML=`<br><span class="r">Rating: ${products.rating}</span><br><br><b>Stock:<b> ${products.stock}<br> Availibility: <span class="avail">${products.availabilityStatus}</span>`
         str=``
         products.reviews.map((i)=>{
            str+= `<div class="review">
                     <p><b>Name:</b>${i.reviewerName}</p>
-                    <p><b>Email:</b>${i.reviewerEmail}</p>
-                    <p> <b>Date:</b>${i.date.substring(0,10)}</p>
-                    <p><b>Comment:</b>${i.comment}</p>
+                    <p><b>Comment:</b>${i.comment.substring(0,15)}</p>
                 </div>`
         })
         document.getElementById("rev").innerHTML=str;
-        document.getElementById("pc").innerHTML=`<p> <b> RETURN POLICY : </b> ${products.returnPolicy}</p>
+        document.getElementById("pc").innerHTML=`<p> <br><b> RETURN POLICY : </b> ${products.returnPolicy}</p>
         <p><b>Minimum Order Quantity :</b>${products.minimumOrderQuantity}</p>`;
-        document.getElementById("img2").src=`${products.meta.qrCode}`;
     }
     catch(error)
     {
