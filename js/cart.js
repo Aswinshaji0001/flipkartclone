@@ -11,8 +11,9 @@ function getCart(){
                     <img id="img" src="${value.thumbnail}" alt="">
                     </div>
                     <div class="tit">
-                    <h2>${value.title}</h2><br>
-                    <b><h2>$ ${value.price}<b></h2>
+                     <h2>$${value.price}</h2>
+                    <h2>${value.title.substring(0,15)}</h2>
+                   
                     </div>
                     <div class="brn">
                         <button class="brnn" onclick="removeCart('${value.id}')">REMOVE</button>

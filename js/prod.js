@@ -16,10 +16,12 @@ async function fetchData(){
         str1+=`<img onmouseover="changeImage('${i}')" src="${i}" alt="" >`;
         })
         document.getElementById("m2").innerHTML=str1;
-        document.getElementById("one").innerHTML=`<strike>${products.title}</strike>`
+        document.getElementById("one").innerHTML=`${products.title}`
         document.getElementById("three").innerHTML=`${products.description.substring(0,30)}`
-        document.getElementById("four").innerHTML=`${products.category}`
-        document.getElementById("five").innerHTML=`<span class="m"><b>$${products.price}</b></span>`
+        cost=products.price-(products.price*products.discountPercentage/100);
+        c=cost.toString();
+        document.getElementById("five").innerHTML=`<span class="k">$${c.substring(0,5)}  <span class="x"><strike>$${products.price}</strike></span>   <span class="y">${products.discountPercentage}% OFF</span></span>`
+        document.getElementById("four").innerHTML=`<span class="m"> Category :${products.category}</span>`
         document.getElementById("six").innerHTML=`<span class="m">Brand: ${products.brand}</span>`
         document.getElementById("seven").innerHTML=`<span class="m">Model No: ${products.sku}</span>`
         document.getElementById("eight").innerHTML=`<span class="m">Warranty Info :${products.warrantyInformation}</span>`

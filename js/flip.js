@@ -29,7 +29,6 @@
             <a href="product.html?id=${product.id}"><img src="${product.thumbnail}" alt=""></a>
                     <h5>${product.title.substring(0,15)}</h5>
                     <p>${product.price}</p>
-                    <button class="bt2"><a href="product.html?id=${product.id}">Click Here</a></button>
 
             </div>`
         })

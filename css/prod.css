@@ -15,7 +15,19 @@
     background-color: rgb(255, 255, 255);
     display: flex;
     text-align: center;
+    border-radius: 10px;
 
+}
+#three,#four{
+    font-weight: normal;
+}
+.x{
+    font-size: 20px;
+    opacity: .5;
+}
+.y{
+    color: orangered;
+    font-size: 25px;
 }
 .m2{
     width: 10%;
@@ -38,15 +50,17 @@
 .cardx{
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     margin-left: 10px;
+    padding-left: 20px;
     margin-right: 50px;
     width: 60%;
     height: 70vh;
     background-color: rgb(255, 255, 255);
     color: black;
+    border-radius: 10px;
 
 }
 .price{
-    color:black
+    color:black;
 }
 .avail{
     color:red;
