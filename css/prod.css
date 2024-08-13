@@ -66,8 +66,9 @@
     color:red;
 }
 .r{
+    padding: 1%;
     margin-top: 5px;
-    background-color: black;
+    background-color: darkgreen;
     color: white;
     border-radius: 5px;
 }

@@ -89,3 +89,7 @@ function plus(i){
     document.getElementById(`pr${a}`).innerHTML=`$${c.toString().substring(0,7)}`;
     document.getElementById("tm").innerHTML=`Total Amount: $${(total+5).toString().substring(0,7)}`
 }
+function clearA(){
+    localStorage.clear();
+    document.body.innerHTML="<h2>Cart empty..</h2><a href='./main.html'>Go to products</a>";
+}
