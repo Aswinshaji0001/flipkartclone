@@ -6,7 +6,6 @@
     display: flex;
     justify-content: space-evenly;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
     position: relative;
 }
 .img img{
@@ -37,4 +36,12 @@
     position: absolute;
     width: 500px;
     height: 500px;
+}
+.qnty{
+    background-color: black;
+    border-radius: 50%;
+}
+.qnty img{
+    width: 20px;
+    height: 15px;
 }
