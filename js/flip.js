@@ -5,10 +5,9 @@
         str=``
         products.products.map((product)=>{
             str+=`<div class="card">
-                    <img src="${product.thumbnail}" alt="">
-                    <h5>${product.title.substring(0,15)}</h5>
-                    <p>${product.price}</p>
-                    <button class="bt2"><a href="product.html?id=${product.id}">Click Here</a></button>
+            <a href="product.html?id=${product.id}"><img src="${product.thumbnail}" alt=""></a>
+                    <h4>${product.title.substring(0,15)}</h4>
+                    <span><b><h2>$ ${product.price}<b><h2></span>
 
             </div>`
         })
@@ -27,7 +26,7 @@
         str=``
         products.products.filter((i)=>i.title.toLowerCase().includes(e.target.value.toLowerCase())).map((product)=>{
             str+=`<div class="card">
-                    <img src="${product.thumbnail}" alt="">
+            <a href="product.html?id=${product.id}"><img src="${product.thumbnail}" alt=""></a>
                     <h5>${product.title.substring(0,15)}</h5>
                     <p>${product.price}</p>
                     <button class="bt2"><a href="product.html?id=${product.id}">Click Here</a></button>

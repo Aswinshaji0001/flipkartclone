@@ -1,13 +1,18 @@
 .cart{
-    width: 25%;
     align-items: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px solid black;
    
 }
+#carts{
+    width: 70%;
+    height: 80vh;
+}
 .brn{
-   margin-top: 50px;
     color: white;
    
 }

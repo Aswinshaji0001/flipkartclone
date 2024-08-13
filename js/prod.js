@@ -16,14 +16,14 @@ async function fetchData(){
         str1+=`<img onmouseover="changeImage('${i}')" src="${i}" alt="" >`;
         })
         document.getElementById("m2").innerHTML=str1;
-        document.getElementById("one").innerHTML=`${products.title}`
-        document.getElementById("three").innerHTML=`${products.description}`
+        document.getElementById("one").innerHTML=`<strike>${products.title}</strike>`
+        document.getElementById("three").innerHTML=`${products.description.substring(0,30)}`
         document.getElementById("four").innerHTML=`${products.category}`
-        document.getElementById("five").innerHTML=`<span class="m"><b>$<b>${products.price}</span>`
-        document.getElementById("six").innerHTML=`<span class="m"><b>Brand:<b> ${products.brand}</span>`
-        document.getElementById("seven").innerHTML=`<span class="m"><b>Model No:<b> ${products.sku}</span>`
-        document.getElementById("eight").innerHTML=`<span class="m"><b>Warranty Info : <b>${products.warrantyInformation}</span>`
-        document.getElementById("nine").innerHTML=`<span class="m"><b>Shipping Info : <b>${products.shippingInformation}</span><br>`
+        document.getElementById("five").innerHTML=`<span class="m"><b>$${products.price}</b></span>`
+        document.getElementById("six").innerHTML=`<span class="m">Brand: ${products.brand}</span>`
+        document.getElementById("seven").innerHTML=`<span class="m">Model No: ${products.sku}</span>`
+        document.getElementById("eight").innerHTML=`<span class="m">Warranty Info :${products.warrantyInformation}</span>`
+        document.getElementById("nine").innerHTML=`<span class="m">Shipping Info :${products.shippingInformation}</span><br>`
         document.getElementById("ten").innerHTML=`<br><span class="r">Rating: ${products.rating}</span><br><br><b>Stock:<b> ${products.stock}<br> Availibility: <span class="avail">${products.availabilityStatus}</span>`
         str=``
         products.reviews.map((i)=>{
@@ -33,8 +33,8 @@ async function fetchData(){
                 </div>`
         })
         document.getElementById("rev").innerHTML=str;
-        document.getElementById("pc").innerHTML=`<p> <br><b> RETURN POLICY : </b> ${products.returnPolicy}</p>
-        <p><b>Minimum Order Quantity :</b>${products.minimumOrderQuantity}</p>`;
+        document.getElementById("pc").innerHTML=`<p> <br>RETURN POLICY :  ${products.returnPolicy}</p>
+        <p>Minimum Order Quantity :${products.minimumOrderQuantity}</p>`;
     }
     catch(error)
     {
