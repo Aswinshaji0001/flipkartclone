@@ -21,7 +21,20 @@ function getCart(){
               </div>`
     }
     document.getElementById("carts").innerHTML=str;
-   
+    str1=``
+    str1+=` <table border="1px" style="width:100%">
+            <tr>
+                <th>Title</th>
+                <th>Qunatity</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>ONE</td>
+                <td>TWO</td>
+                <td>THREE</td>
+            </tr>
+        </table>`
+        document.getElementById("tbl").innerHTML=str1;
 }
 function removeCart(id){
     localStorage.removeItem(id);
